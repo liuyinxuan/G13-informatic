@@ -9,6 +9,24 @@ This repository combines two development milestones:
 
 The project was developed as part of an Information Retrieval course project.
 
+## Team members
+* Phuong Luong @pluong3
+    - NetID: pluong3 
+    - Student ID:62887840
+    
+* Yinxuan Liu @yinxual1
+    - NetID: yinxual1
+    - Student ID:70861360 
+ 
+* Robin Stoebe @cstoebe
+    - NetID: cstoebe
+    - Student ID:63085315
+    
+* Navid Sharmsar @nsharmsa
+    - NetID: nsharmsa
+    - Student ID:66353809
+
+
 ## Overview
 
 The goal of this project is to build a functional search engine that can retrieve relevant documents from a collection of HTML pages. The system processes raw HTML content, extracts useful text, builds an inverted index, and allows users to search for documents using keyword queries.
