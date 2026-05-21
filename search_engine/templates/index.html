@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Toogle Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="landing">
+        <img src="{{ url_for('static', filename='guicon/toogle.png') }}" alt="Some logo">
+        <h1 class="landing-name">INF 141 Assignment 4</h1>
+    </div>
+    <br>
+    <div class="search-aspect">
+        <form action="/query" method="post">
+            <input type="text" name="query_input" placeholder="Enter your search query">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div class="query-return">
+        <h2>Search Results:</h2>
+        <ul>
+            {% for result in results %}
+                <li><a href="{{ result }}">{{ result }}</a></li>
+                <!--  <p>{{ result.summary }}</p> -->
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

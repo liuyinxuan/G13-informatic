@@ -1,0 +1,51 @@
+Here are queries we used to test our search engine:
+
+10 Queries that performed Well:
+1. "climate change"
+2. "what is machine learning?"
+3. "What is blockchain?"
+4. "neural networks findings 2000"
+5. "UCI School of Biological Sciences"
+6. "Specify a specialization"
+7. "how do I apply for graduation?"
+8. "UCI policy"
+9. "tuition fees"
+10. "How do I find internship in UCI?"
+
+
+10 Queries that performed poorly:
+
+Set 1:
+1. "what is the COVID-19 case numbers in 2021?"
+2. "what classes at uci offered by Iftekhar Ahmed?"
+3. "Leben von Marie Curie" (not English)
+4. "Cold fusion in modern physics"
+5. "Who won the 2024 US presidential election?"
+Issues:
+-- No result were found
+Reason:
+-- The query is too long, they would likely got no intersections if only perform strict-AND search
+Solution (revise):
+-- Added a Or-search to engine that would perform whenever AND-search got no result
+
+Set 2:
+6. "is is the the and or it"
+7. "when where why how"
+8. "&@*$(^*#@(^#@^($()#"
+Issues:
+-- Code aborted due to error
+Reason:
+-- The query only contains stopwords, which bypassed our query check and caused error after stopword elimination
+Solution (revise):
+-- Added another query check after stopword elimination
+
+Set 3:
+9. "How can I make a apple pie?"
+10. "OpenAI GPT-4"
+Issues:
+-- Too less result or no result at all
+Reason:
+-- There's not enough data in the give dataset
+Solution (unsolved):
+-- This issue remain unsolve
+-- One solution is to add more .json files for webpages, but we are unable to do so.
